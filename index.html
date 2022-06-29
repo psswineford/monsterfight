@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Fight!</title>
+</head>
+<body>
+    <h1>Pick up Your Weapon and Fight! </h1>
+    <div class="Character-block">
+        <p>Character HP = <span id="charHP">20</span></p>
+        <p>Character Armor Class = 15</p>
+    </div>
+
+    <div class="Monster-block">
+        <p>Monster HP = <span id="monsterHP">10</span></p>
+        <p>Monster Armor class = 10</p>
+    </div>
+    
+    <div class="attack-results-block">
+        <p id="char-attack-results"></p>
+        <p id="monster-attack-results"></p>
+    </div>
+
+    <div class="round-results-block">
+        <p id="char-death"></p>
+        <p id="monster-death"></p>
+    </div>
+
+    <button onclick="Attack();">Attack!</button>
+    <script src="./script.js"></script>
+</body>
+</html>
