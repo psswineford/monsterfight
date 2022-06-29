@@ -40,7 +40,7 @@ function Attack() {
 
   checkCharacterHP();
   checkMonsterHP();
-  endGame();
+  // endGame();
 }
 
 //checking the characters HP and returning the results
@@ -50,6 +50,8 @@ function checkCharacterHP() {
     characterDeathResults = "You are still alive!";
   } else {
     characterDeathResults = "You are dead. So sad!";
+    document.getElementById("attack-button").style.display = "none";
+    document.getElementById("reset-button").style.display = "block";
   }
 
   document.getElementById("char-death").innerHTML = characterDeathResults;
@@ -62,18 +64,24 @@ function checkMonsterHP() {
     monsterDeathResults = "The monster still lives!";
   } else {
     monsterDeathResults = "You have defeated the monster!";
+    document.getElementById("attack-button").style.display = "none";
+    document.getElementById("reset-button").style.display = "block";
   }
 
   document.getElementById("monster-death").innerHTML = monsterDeathResults;
 }
 
 //end the game and refresh the page
-function endGame() {
-    if (monsterHP <= 0) {
-        alert("You have defeated the monster and won the fight!")
-        location.reload();
-    } else if(characterHP <= 0){
-        alert("The monster has defeated you!")
-        location.reload();
-    }
+// function endGame() {
+//     if (monsterHP <= 0) {
+//         alert("You have defeated the monster and won the fight!")
+//         location.reload();
+//     } else if(characterHP <= 0){
+//         alert("The monster has defeated you!")
+//         location.reload();
+//     }
+// }
+
+function resetGame() {
+  location.reload();
 }
